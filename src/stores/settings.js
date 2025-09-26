@@ -13,7 +13,7 @@ export const useSettings = defineStore('settings', () => {
 		auto: true,
 		cache: ['allowGuestAccess'],
 		onError(error) {
-			console.error("Failed to fetch guest access settings:", error);
+			console.error("Failed to fetch guest access settings:", error || 'Unknown error');
 		}
 	})
 
@@ -23,7 +23,7 @@ export const useSettings = defineStore('settings', () => {
 		auto: true,
 		cache: ['preventSkippingVideos'],
 		onError(error) {
-			console.error("Failed to fetch prevent skipping videos setting:", error);
+			console.error("Failed to fetch prevent skipping videos setting:", error || 'Unknown error');
 		}
 	})
 
@@ -32,7 +32,7 @@ export const useSettings = defineStore('settings', () => {
 		cache: 'Sidebar Settings',
 		auto: false,
 		onError(error) {
-			console.error("Failed to fetch sidebar settings:", error);
+			console.error("Failed to fetch sidebar settings:", error || 'Unknown error');
 		}
 	})
 
