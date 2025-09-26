@@ -8,7 +8,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
 	plugins: [
 		frappeui({
-			frappeProxy: true,
+			frappeProxy: 'http://69.62.114.182:8000',
 			lucideIcons: true,
 			jinjaBootData: true,
 			frappeTypes: {
