@@ -38,7 +38,19 @@ export default defineConfig({
 	],
 	server: {
 		host: '0.0.0.0', // Accept connections from any network interface
-		allowedHosts: ['ps', 'fs', 'home'], // Explicitly allow this host
+		port: 8080,
+		proxy: {
+			'/api': {
+				target: 'http://69.62.114.182:8000',
+				changeOrigin: true,
+				secure: false,
+			},
+			'/assets': {
+				target: 'http://69.62.114.182:8000',
+				changeOrigin: true,
+				secure: false,
+			},
+		},
 	},
 	resolve: {
 		alias: {
