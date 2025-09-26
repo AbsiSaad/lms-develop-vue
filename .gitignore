@@ -4,3 +4,4 @@ dist
 dist-ssr
 dev-dist
 *.local
+.env
