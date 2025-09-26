@@ -15,14 +15,5 @@ export const usersStore = defineStore('lms-users', () => {
 		},
 		auto: true,
 	})
-
-	const allUsers = createResource({
-		url: 'lms.lms.api.get_all_users',
-		cache: ['allUsers'],
-	})
-
-	return {
-		userResource,
-		allUsers,
 	}
 })
