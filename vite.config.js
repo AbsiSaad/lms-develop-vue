@@ -45,6 +45,11 @@ export default defineConfig({
 				changeOrigin: true,
 				secure: false,
 			},
+			'/login': {
+				target: 'http://69.62.114.182:8000',
+				changeOrigin: true,
+				secure: false,
+			},
 			'/assets': {
 				target: 'http://69.62.114.182:8000',
 				changeOrigin: true,
