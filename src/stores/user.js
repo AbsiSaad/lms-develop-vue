@@ -15,5 +15,4 @@ export const usersStore = defineStore('lms-users', () => {
 		},
 		auto: true,
 	})
-	}
 })
