@@ -12,6 +12,9 @@ export const useSettings = defineStore('settings', () => {
 		params: { field: 'allow_guest_access' },
 		auto: true,
 		cache: ['allowGuestAccess'],
+		onError(error) {
+			console.error("Failed to fetch guest access settings:", error);
+		}
 	})
 
 	const preventSkippingVideos = createResource({
@@ -19,12 +22,18 @@ export const useSettings = defineStore('settings', () => {
 		params: { field: 'prevent_skipping_videos' },
 		auto: true,
 		cache: ['preventSkippingVideos'],
+		onError(error) {
+			console.error("Failed to fetch prevent skipping videos setting:", error);
+		}
 	})
 
 	const sidebarSettings = createResource({
 		url: 'lms.lms.api.get_sidebar_settings',
 		cache: 'Sidebar Settings',
 		auto: false,
+		onError(error) {
+			console.error("Failed to fetch sidebar settings:", error);
+		}
 	})
 
 	return {
