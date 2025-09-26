@@ -25,10 +25,6 @@ const router = useRouter()
 const fromLesson = ref(false)
 
 onMounted(() => {
-	if (!user.data) {
-		router.push({ name: 'Courses' })
-	}
-
 	if (new URLSearchParams(window.location.search).get('fromLesson')) {
 		fromLesson.value = true
 	}

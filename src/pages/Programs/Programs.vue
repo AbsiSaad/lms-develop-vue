@@ -69,9 +69,6 @@ const currentProgram = ref(null)
 const readOnlyMode = window.read_only_mode
 
 onMounted(() => {
-	if (!user.data) {
-		window.location.href = '/login'
-	}
 	if (user.data?.is_moderator || user.data?.is_instructor) {
 		programs.reload()
 	}

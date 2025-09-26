@@ -127,9 +127,6 @@ const props = defineProps({
 })
 
 onMounted(() => {
-	if (!user.data?.is_moderator && !user.data?.is_instructor) {
-		window.location.href = '/login'
-	}
 	capture('lesson_form_opened')
 	startRecording()
 	editor.value = renderEditor('content')

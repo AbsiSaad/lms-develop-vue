@@ -391,7 +391,6 @@ const meta = reactive({
 })
 
 onMounted(() => {
-	if (!user.data) window.location.href = '/login'
 	if (props.batchName != 'new') {
 		fetchBatchInfo()
 	} else {

@@ -254,13 +254,6 @@ const props = defineProps({
 const questions = ref([])
 
 onMounted(() => {
-	if (
-		props.quizID == 'new' &&
-		!user.data?.is_moderator &&
-		!user.data?.is_instructor
-	) {
-		router.push({ name: 'Courses' })
-	}
 	if (props.quizID !== 'new') {
 		quizDetails.reload()
 	}

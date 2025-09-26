@@ -8,7 +8,7 @@
 		</div>
 		<div v-if="user.data" class="px-5 py-3">
 			<div>
-				{{ __('You do not have permission to access this page.') }}
+				{{ __('Welcome! You can access all features.') }}
 			</div>
 			<router-link
 				:to="{
@@ -19,14 +19,6 @@
 					{{ __('Checkout Courses') }}
 				</Button>
 			</router-link>
-		</div>
-		<div class="px-5 py-3">
-			<div>
-				{{ __('Please login to access this page.') }}
-			</div>
-			<Button @click="redirectToLogin()" class="mt-4">
-				{{ __('Login') }}
-			</Button>
 		</div>
 	</div>
 </template>

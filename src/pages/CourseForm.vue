@@ -396,10 +396,6 @@ const meta = reactive({
 })
 
 onMounted(() => {
-	if (!user.data?.is_moderator && !user.data?.is_instructor) {
-		router.push({ name: 'Courses' })
-	}
-
 	if (props.courseName !== 'new') {
 		fetchCourseInfo()
 	} else {

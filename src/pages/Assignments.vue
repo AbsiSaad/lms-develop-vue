@@ -102,9 +102,6 @@ const router = useRouter()
 const readOnlyMode = window.read_only_mode
 
 onMounted(() => {
-	if (!user.data?.is_moderator && !user.data?.is_instructor) {
-		router.push({ name: 'Courses' })
-	}
 	getAssignmentCount()
 	titleFilter.value = router.currentRoute.value.query.title
 	typeFilter.value = router.currentRoute.value.query.type

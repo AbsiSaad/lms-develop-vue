@@ -47,10 +47,6 @@ const title = createResource({
 })
 
 onMounted(() => {
-	if (!user.data) {
-		window.location.href = '/login'
-	}
-
 	if (new URLSearchParams(window.location.search).get('fromLesson')) {
 		fromLesson.value = true
 	}

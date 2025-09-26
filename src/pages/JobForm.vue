@@ -242,8 +242,6 @@ const job = reactive({
 })
 
 onMounted(() => {
-	if (!user.data) window.location.href = '/login'
-
 	if (props.jobName != 'new') jobDetail.reload()
 })
 
